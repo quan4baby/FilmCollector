@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "movies" => "movies#index"
   get "movies/new" => "movies#new"
   post "movies" => "movies#create"
+  get "actors/:id" => "actors#show"
 end
