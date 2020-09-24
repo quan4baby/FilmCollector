@@ -16,6 +16,11 @@ class MoviesController < ApplicationController
 		end
 	end
 
+	def show
+				@actors = Movie.find(params[:id]).actors
+
+	end
+	
 	private
 	def movie_params
 		params.require(:movie).permit(:title, :duration, :rating, :release_date)
